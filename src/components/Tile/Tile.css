@@ -1,0 +1,15 @@
+.tileBlank {
+    width:16px;
+    height:16px;
+    padding:0;
+    outline: none;
+    border: 0;
+}
+
+.tileImgContainer {
+    width:16px;
+    height:16px;
+    padding:0;
+    outline: none;
+    border: 0;
+}
