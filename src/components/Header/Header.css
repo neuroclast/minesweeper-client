@@ -1,0 +1,12 @@
+.headerContainer {
+    text-align: center;
+}
+
+.faceButton {
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+}

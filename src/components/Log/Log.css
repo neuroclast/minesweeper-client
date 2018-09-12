@@ -1,0 +1,9 @@
+.logContainer {
+    border: solid 3px;
+    border-color: #808080 #ffffff #ffffff #808080 ;
+    margin-top: 6px;
+    background-color: #c0c0c0;
+    outline: none;
+    resize: none;
+    width: 98%;
+}

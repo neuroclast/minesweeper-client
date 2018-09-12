@@ -38,13 +38,25 @@ class Tile extends Component {
         };
     }
 
+
+    handleMouse = (event, state) => {
+        if(this.props.gameOver) {
+            return;
+        }
+
+        this.setState({
+            isDown: state
+        });
+    };
+
+
     render() {
-        if(this.props.value === undefined) {
+        if(this.props.value === undefined || this.props.value == null) {
             return (
                 <button className="tileBlank"
-                           onMouseDown={() => this.setState({isDown:true})}
-                           onMouseUp={() => this.setState({isDown:false})}
-                           onMouseOut={() => this.setState({isDown:false})}
+                           onMouseDown={(event) => this.handleMouse(event, true)}
+                           onMouseUp={(event) => this.handleMouse(event, false)}
+                           onMouseOut={(event) => this.handleMouse(event, false)}
                            onClick={(event) => this.props.onClick(event, this.props.x, this.props.y)}
                            onContextMenu={(event) => this.props.onRightClick(event, this.props.x, this.props.y)}>
                     <img src={!this.state.isDown ? blankImg : blankDownImg} alt="" draggable="false" />
